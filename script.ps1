@@ -16,13 +16,13 @@ Write-Host "  YouTube Downloader (PRO UI) " -ForegroundColor Cyan
 Write-Host "==============================" -ForegroundColor Cyan
 Write-Host ""
 
-if (!(Test-Path "youtube_video_link.txt")) {
-    Write-Host "ERROR: youtube_video_link.txt not found!" -ForegroundColor Red
+if (!(Test-Path "link.txt")) {
+    Write-Host "ERROR: link.txt not found!" -ForegroundColor Red
     Read-Host "Press Enter to exit..."
     exit
 }
 
-$url = Get-Content "youtube_video_link.txt"
+$url = Get-Content "link.txt"
 
 if ([string]::IsNullOrWhiteSpace($url)) {
     Write-Host "ERROR: URL is empty!" -ForegroundColor Red
