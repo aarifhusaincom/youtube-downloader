@@ -39,7 +39,7 @@ $env:PATH = "$PWD;$env:PATH"
 # yt-dlp process
 $psi = New-Object System.Diagnostics.ProcessStartInfo
 $psi.FileName = "yt-dlp.exe"
-$psi.Arguments = "-f `"bv*[height<=1080]+ba/best[height<=1080]`" --recode-video mp4 --merge-output-format mp4 --progress --js-runtimes node -o `"%(title)s.%(ext)s`" `"$url`""
+$psi.Arguments = "-f `"bv*[height<=720]+ba/best[height<=720]`" --recode-video mp4 --merge-output-format mp4 --progress --js-runtimes node -o `"%(title)s.%(ext)s`" `"$url`""
 $psi.RedirectStandardOutput = $true
 $psi.UseShellExecute = $false
 $psi.CreateNoWindow = $true
